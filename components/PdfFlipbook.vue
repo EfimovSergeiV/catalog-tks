@@ -129,6 +129,8 @@
             </span>
 
             <button class="bg-blue-500 text-white px-4 py-2 rounded" @click="goNext">Вперед</button>
+
+            <nuxt-link to="/">Главная</nuxt-link>
           </div>
 
         </div>

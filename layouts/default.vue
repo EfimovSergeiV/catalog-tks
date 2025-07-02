@@ -1,5 +1,9 @@
 <template>
-  <div class="bg-blue-500">
+  <div class="">
+
+    <div class="absolute top-0 left-0 z-50 w-full">
+      <NavBar />      
+    </div>
 
     <slot />
 
