@@ -34,14 +34,17 @@
     if (!bookContainer.value) return
 
     const pageFlip = new $pageFlip(bookContainer.value, {
-      width: 440,
-      height: 600,
-      size: 'fixed',
-      // minWidth: 315,
-      // maxWidth: 440,
-      // minHeight: 420,
-      // maxHeight: 600,
-      maxShadowOpacity: 0.5,
+      width: 550, // base page width
+      height: 733, // base page height
+
+      size: "stretch",
+
+      minWidth: 315,
+      maxWidth: 1000,
+      minHeight: 420,
+      maxHeight: 1350,
+
+      maxShadowOpacity: 0.5, // Half shadow intensity
       showCover: true,
       mobileScrollSupport: false
     })
@@ -84,11 +87,11 @@
   <div class="">
     
     <div>
-      <div class=" absolute top-0 left-0 w-full z-10">
-        <div class="flex justify-center items-center">
-          <div class="bg-blue-500 w-[880px] h-[600px]">
+      <div class="">
+        <div class="">
+          <div class="">
 
-            <div class="select-none overflow-hidden md:py-36">
+            <div class="overflow-hidden py-8">
               <div ref="bookContainer" class="page-flip">
                 <div v-for="(src, index) in pages" :key="index" class="my-page cursor-pointer">
                   <img :src="src" class="w-full h-full" >
@@ -101,7 +104,7 @@
       </div>
 
 
-      <div class="absolute bottom-0 left-0 w-full z-10">
+      <!-- <div class="absolute bottom-0 left-0 w-full z-10">
         <div class="py-4">
 
           <div class=" flex justify-center items-center mt-4 space-x-4">
@@ -115,7 +118,7 @@
           </div>
 
         </div>
-      </div>
+      </div> -->
     </div>
 
 
