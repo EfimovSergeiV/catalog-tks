@@ -102,7 +102,7 @@
 
 
       <div class="">
-        <div class="absolute top-0 left-0 w-full min-h-screen flex items-center justify-center z-10 bg-gray-300">
+        <div class="fixed top-0 left-0 w-full min-h-screen flex items-center justify-center z-10 bg-gray-300/0">
           <div class="lg:w-[1100px]">
 
             <div class="overflow-hidden h-screen content-center px-12">
@@ -122,15 +122,14 @@
         <div class="py-4">
 
           <div class=" flex justify-center items-center mt-4 space-x-4">
-            <button class="bg-blue-500 text-white px-4 py-2 rounded mr-2" @click="goPrev">Назад</button>
+            <button class="bg-blue-500 text-white px-4 py-1 rounded mr-2" @click="goPrev">Назад</button>
 
             <span class="text-base text-gray-700 font-semibold">
               [{{ currentPage }} из {{ totalPages }}]
             </span>
 
-            <button class="bg-blue-500 text-white px-4 py-2 rounded" @click="goNext">Вперед</button>
+            <button class="bg-blue-500 text-white px-4 py-1 rounded" @click="goNext">Вперед</button>
 
-            <nuxt-link to="/">Главная</nuxt-link>
           </div>
 
         </div>
