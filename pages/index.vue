@@ -20,11 +20,11 @@
 
 <template>
   <div class="">
-    <div class="container mx-auto px-6 py-6">
+    <div class="container mx-auto">
 
 
-      <div class="text-right">
-        <div class="bg-red-500 w-full">
+      <div class="">
+        <div class="">
 
           <PdfFlipbook  class=""/>
           
