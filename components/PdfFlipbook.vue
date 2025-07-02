@@ -40,9 +40,9 @@
       size: "stretch",
 
       minWidth: 315,
-      maxWidth: 1000,
+      maxWidth: 550,
       minHeight: 420,
-      maxHeight: 1350,
+      maxHeight: 733,
 
       maxShadowOpacity: 0.5, // Half shadow intensity
       showCover: true,
@@ -87,11 +87,25 @@
   <div class="">
     
     <div>
-      <div class="">
-        <div class="">
-          <div class="">
 
-            <div class="overflow-hidden py-8">
+      <!-- <div class="">
+        <div class="absolute top-0 left-0 w-full min-h-screen flex items-center justify-center z-10 bg-gray-300">
+          <div class="overflow-hidden py-28 px-12">
+            <div ref="bookContainer" class="page-flip">
+              <div v-for="(src, index) in pages" :key="index" class="my-page cursor-pointer">
+                <img :src="src" class="w-full h-full" >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+      <div class="">
+        <div class="absolute top-0 left-0 w-full min-h-screen flex items-center justify-center z-10 bg-gray-300">
+          <div class="lg:w-[1100px]">
+
+            <div class="overflow-hidden h-screen content-center px-12">
               <div ref="bookContainer" class="page-flip">
                 <div v-for="(src, index) in pages" :key="index" class="my-page cursor-pointer">
                   <img :src="src" class="w-full h-full" >
@@ -104,13 +118,13 @@
       </div>
 
 
-      <!-- <div class="absolute bottom-0 left-0 w-full z-10">
+      <div class="absolute bottom-0 left-0 w-full z-10">
         <div class="py-4">
 
           <div class=" flex justify-center items-center mt-4 space-x-4">
             <button class="bg-blue-500 text-white px-4 py-2 rounded mr-2" @click="goPrev">Назад</button>
 
-            <span class="text-lg text-white font-semibold">
+            <span class="text-base text-gray-700 font-semibold">
               [{{ currentPage }} из {{ totalPages }}]
             </span>
 
@@ -118,7 +132,7 @@
           </div>
 
         </div>
-      </div> -->
+      </div>
     </div>
 
 
