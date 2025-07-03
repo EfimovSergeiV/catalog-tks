@@ -4,8 +4,8 @@
 
       <!-- Name Page {{ $route.params.name }} -->
 
-      <p class="text-4xl mt-20">Каталоги</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+      <p class="text-2xl mt-20">Каталоги сварочного оборудования</p>
+      <div class="flex flex-row flex-wrap gap-16 mt-8">
 
         <div>
           <div class="flex items-center justify-center">
