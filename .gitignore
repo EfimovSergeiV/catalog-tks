@@ -1,5 +1,6 @@
 output.zip
 *.png
+*.webp
 
 # Nuxt dev/build outputs
 .output
