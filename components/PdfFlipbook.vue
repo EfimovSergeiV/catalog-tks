@@ -101,15 +101,15 @@ const catalogs = {
     if (!bookContainer.value) return
 
     const pageFlip = new $pageFlip(bookContainer.value, {
-      width: 550, // base page width
-      height: 733, // base page height
+      width: 600, // base page width
+      height: 783, // base page height
 
       size: "stretch",
 
       minWidth: 315,
-      maxWidth: 550,
+      maxWidth: 600,
       minHeight: 420,
-      maxHeight: 733,
+      maxHeight: 783,
 
       maxShadowOpacity: 0.5, // Half shadow intensity
       showCover: true,
@@ -171,10 +171,10 @@ const catalogs = {
       
 
       <div class="">
-        <div class="fixed top-0 left-0 w-full min-h-screen flex items-center justify-center z-10 bg-gray-300/0">
-          <div class="lg:w-[1100px]">
+        <div class="flex items-center justify-center">
+          <div class="bg-red-500/0 lg:w-[1200px]">
 
-            <div class="overflow-hidden h-screen content-center px-12">
+            <div class="overflow-hidden min-h-screen content-center px-4 py-20">
               <div ref="bookContainer" class="page-flip">
                 <div v-for="(src, index) in catalogs[`${$route.params.name}`]" :key="index" class="my-page cursor-pointer">
                   <img :src="src" class="w-full h-full" >
@@ -182,7 +182,7 @@ const catalogs = {
               </div>
             </div>
 
-          </div>          
+          </div>
         </div>
       </div>
 
