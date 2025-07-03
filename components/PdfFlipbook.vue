@@ -26,6 +26,73 @@
     '/1/page_16.png',
   ]
 
+const catalogs = {
+  "railwelding": [
+    '/1/page_1.png',
+    '/1/page_2.png',
+    '/1/page_3.png',
+    '/1/page_4.png',
+    '/1/page_5.png',
+    '/1/page_6.png',
+    '/1/page_7.png',
+    '/1/page_8.png',
+    '/1/page_9.png',
+    '/1/page_10.png',
+    '/1/page_11.png',
+    '/1/page_12.png',
+    '/1/page_13.png',
+    '/1/page_14.png',
+    '/1/page_15.png',
+    '/1/page_16.png',
+  ],
+  "katalog-produktsii": [
+    '/2/page_1.png',
+    '/2/page_2.png',
+    '/2/page_3.png',
+    '/2/page_4.png',
+    '/2/page_5.png',
+    '/2/page_6.png',
+    '/2/page_7.png',
+    '/2/page_8.png',
+    '/2/page_9.png',
+    '/2/page_10.png',
+    '/2/page_11.png',
+    '/2/page_12.png',
+    '/2/page_13.png',
+    '/2/page_14.png',
+    '/2/page_15.png',
+    '/2/page_16.png',
+    '/2/page_17.png',
+    '/2/page_18.png',
+    '/2/page_19.png',
+    '/2/page_20.png',
+    '/2/page_21.png',
+    '/2/page_22.png',
+    '/2/page_23.png',
+    '/2/page_24.png',
+    '/2/page_25.png',
+    '/2/page_26.png',
+    '/2/page_27.png',
+    '/2/page_28.png',
+    '/2/page_29.png',
+    '/2/page_30.png',
+    '/2/page_31.png',
+    '/2/page_32.png',
+    '/2/page_33.png',
+    '/2/page_34.png',
+    '/2/page_35.png',
+    '/2/page_36.png',
+    '/2/page_37.png',
+    '/2/page_38.png',
+    '/2/page_39.png',
+    '/2/page_40.png',
+    '/2/page_41.png',
+    '/2/page_42.png',
+    '/2/page_43.png',
+    '/2/page_44.png',
+  ]
+}
+
   // Отображаем текущую страницу (1-based) и общее количество
   const currentPage = ref(1)
   const totalPages = ref(pages.length)
@@ -84,7 +151,7 @@
 
 <template>
 
-  <div class="">
+  <div class="select-none">
     
     <div>
 
@@ -99,7 +166,9 @@
           </div>
         </div>
       </div> -->
-
+      <!-- <p class="text-white pt-14">Name Page {{ $route.params.name }}</p>
+      <p class="text-white pt-14">Name Page {{ catalogs["katalog-produktsii"] }}</p> -->
+      
 
       <div class="">
         <div class="fixed top-0 left-0 w-full min-h-screen flex items-center justify-center z-10 bg-gray-300/0">
@@ -107,7 +176,7 @@
 
             <div class="overflow-hidden h-screen content-center px-12">
               <div ref="bookContainer" class="page-flip">
-                <div v-for="(src, index) in pages" :key="index" class="my-page cursor-pointer">
+                <div v-for="(src, index) in catalogs[`${$route.params.name}`]" :key="index" class="my-page cursor-pointer">
                   <img :src="src" class="w-full h-full" >
                 </div>
               </div>
@@ -124,7 +193,7 @@
           <div class=" flex justify-center items-center mt-4 space-x-4">
             <button class="bg-blue-500 text-white px-4 py-1 rounded mr-2" @click="goPrev">Назад</button>
 
-            <span class="text-base text-gray-700 font-semibold">
+            <span class="text-base text-gray-100 font-semibold">
               [{{ currentPage }} из {{ totalPages }}]
             </span>
 

@@ -3,7 +3,9 @@
 
     <!-- Name Page {{ $route.params.name }} -->
 
-    <nuxt-link to="/">Техносвар (логотип)</nuxt-link>
+    <nuxt-link to="/" class="text-gray-100">
+      <img src="/logo.png" class="h-[40px]" >
+    </nuxt-link>
 
 
   </div> 
